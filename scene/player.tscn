@@ -3,13 +3,13 @@
 [ext_resource type="Script" path="res://scene/player.gd" id="1_1rweh"]
 [ext_resource type="Texture2D" uid="uid://dhmw6wn763ro3" path="res://tilesmap/character_femaleAdventurer_sheetHD.png" id="1_ecr6h"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ma78h"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lun5g"]
 atlas = ExtResource("1_ecr6h")
-region = Rect2(576, 512, 192, 256)
+region = Rect2(0, 0, 192, 256)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eygoo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2r84"]
 atlas = ExtResource("1_ecr6h")
-region = Rect2(384, 256, 192, 256)
+region = Rect2(384, 0, 192, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2eix"]
 atlas = ExtResource("1_ecr6h")
@@ -59,14 +59,19 @@ region = Rect2(1344, 1024, 192, 256)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ma78h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eygoo")
+"texture": SubResource("AtlasTexture_lun5g")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2r84")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -122,9 +127,9 @@ script = ExtResource("1_1rweh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -128)
 sprite_frames = SubResource("SpriteFrames_50h5l")
-animation = &"walk"
+animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.921134
+frame_progress = 0.735989
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -93)
