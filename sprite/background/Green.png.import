@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhmw6wn763ro3"
-path="res://.godot/imported/character_femaleAdventurer_sheetHD.png-0bdaf1a0a2a3c535e9c80dbbfce3be2e.ctex"
+uid="uid://cskhh5dfvx7jl"
+path="res://.godot/imported/Green.png-f5ffc27bf2bcdd7558823b52763ac7e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilesmap/character_femaleAdventurer_sheetHD.png"
-dest_files=["res://.godot/imported/character_femaleAdventurer_sheetHD.png-0bdaf1a0a2a3c535e9c80dbbfce3be2e.ctex"]
+source_file="res://sprite/background/Green.png"
+dest_files=["res://.godot/imported/Green.png-f5ffc27bf2bcdd7558823b52763ac7e8.ctex"]
 
 [params]
 

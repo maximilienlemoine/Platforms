@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2tpw260ml6ct"
-path="res://.godot/imported/character_maleAdventurer_sheetHD.png-e86059274a502fea6d41ec21c28f6d6b.ctex"
+uid="uid://c7qtt75glvne6"
+path="res://.godot/imported/Wall Jump (32x32).png-1867c67fe2a42d70bc8aacb68b0709d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilesmap/character_maleAdventurer_sheetHD.png"
-dest_files=["res://.godot/imported/character_maleAdventurer_sheetHD.png-e86059274a502fea6d41ec21c28f6d6b.ctex"]
+source_file="res://sprite/mainCharactere/Wall Jump (32x32).png"
+dest_files=["res://.godot/imported/Wall Jump (32x32).png-1867c67fe2a42d70bc8aacb68b0709d0.ctex"]
 
 [params]
 

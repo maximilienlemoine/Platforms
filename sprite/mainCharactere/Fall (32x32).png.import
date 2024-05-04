@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp6xxga53n0u8"
-path="res://.godot/imported/character_femalePerson_sheetHD.png-0c4e19a56c7acb5251b019f23bbfbb6d.ctex"
+uid="uid://4dx6n2lram82"
+path="res://.godot/imported/Fall (32x32).png-d8609fa1804e0f5aedc5965d18b4cd8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilesmap/character_femalePerson_sheetHD.png"
-dest_files=["res://.godot/imported/character_femalePerson_sheetHD.png-0c4e19a56c7acb5251b019f23bbfbb6d.ctex"]
+source_file="res://sprite/mainCharactere/Fall (32x32).png"
+dest_files=["res://.godot/imported/Fall (32x32).png-d8609fa1804e0f5aedc5965d18b4cd8a.ctex"]
 
 [params]
 

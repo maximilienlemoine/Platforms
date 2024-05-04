@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cogs7pfvsy1xl"
-path="res://.godot/imported/character_zombie_sheetHD.png-b21da7fd169db6013e43ec073a6dea5a.ctex"
+uid="uid://cqof00eywbjvg"
+path="res://.godot/imported/Run (32x32).png-005ce5024be4264c65478b4998e2d422.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilesmap/character_zombie_sheetHD.png"
-dest_files=["res://.godot/imported/character_zombie_sheetHD.png-b21da7fd169db6013e43ec073a6dea5a.ctex"]
+source_file="res://sprite/mainCharactere/Run (32x32).png"
+dest_files=["res://.godot/imported/Run (32x32).png-005ce5024be4264c65478b4998e2d422.ctex"]
 
 [params]
 

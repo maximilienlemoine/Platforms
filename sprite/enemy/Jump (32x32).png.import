@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f85ihm42nnto"
-path="res://.godot/imported/character_malePerson_sheetHD.png-177e7d7896672a534c1fbd37aecb7c93.ctex"
+uid="uid://gbxcpdls3vu1"
+path="res://.godot/imported/Jump (32x32).png-1ace77d72c3b3cd2c6072d8291f919bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilesmap/character_malePerson_sheetHD.png"
-dest_files=["res://.godot/imported/character_malePerson_sheetHD.png-177e7d7896672a534c1fbd37aecb7c93.ctex"]
+source_file="res://sprite/enemy/Jump (32x32).png"
+dest_files=["res://.godot/imported/Jump (32x32).png-1ace77d72c3b3cd2c6072d8291f919bd.ctex"]
 
 [params]
 

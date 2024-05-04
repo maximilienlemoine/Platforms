@@ -274,7 +274,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yxivm")
 }],
-"loop": false,
+"loop": true,
 "name": &"roulade",
 "speed": 20.0
 }, {
@@ -352,8 +352,10 @@ script = ExtResource("1_1rweh")
 texture_filter = 1
 position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_50h5l")
-animation = &"roulade"
+animation = &"run"
 autoplay = "idle"
+frame = 3
+frame_progress = 0.521854
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -12)
@@ -369,7 +371,3 @@ position = Vector2(0, -11)
 target_position = Vector2(19, 0)
 
 [node name="Timer" type="Timer" parent="."]
-process_callback = 0
-wait_time = 4.0
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

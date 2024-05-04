@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu3ifv7wurgy2"
-path="res://.godot/imported/character_robot_sheetHD.png-4c2bef3a18cb8872cfaa8492710413c8.ctex"
+uid="uid://yevbmf27tnqd"
+path="res://.godot/imported/Jump (32x32).png-eeb716e59f76f2c53eab54f9e8e67c5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilesmap/character_robot_sheetHD.png"
-dest_files=["res://.godot/imported/character_robot_sheetHD.png-4c2bef3a18cb8872cfaa8492710413c8.ctex"]
+source_file="res://sprite/mainCharactere/Jump (32x32).png"
+dest_files=["res://.godot/imported/Jump (32x32).png-eeb716e59f76f2c53eab54f9e8e67c5a.ctex"]
 
 [params]
 
