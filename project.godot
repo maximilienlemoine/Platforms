@@ -16,6 +16,14 @@ config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
+[autoload]
+
+Checkpoint="*res://script/checkpoint.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/project_time_tracker/plugin.cfg")
+
 [physics]
 
 2d/default_gravity=1000.0

@@ -11,6 +11,7 @@ var has_changed_direction = false
 @onready var timer = $Timer
 
 func _process(delta):
+	# TODO
 	if not ray_cast_bottom.is_colliding() and !has_changed_direction:
 		has_changed_direction = true
 		timer.start()
