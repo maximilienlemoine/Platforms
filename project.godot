@@ -22,7 +22,7 @@ Checkpoint="*res://script/checkpoint.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/project_time_tracker/plugin.cfg")
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/project_time_tracker/plugin.cfg")
 
 [physics]
 
