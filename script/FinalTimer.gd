@@ -11,5 +11,5 @@ func _on_end_scene_tree_entered():
 	msec = fmod(time, 1) * 100
 	seconds = fmod(time, 60)
 	minutes = fmod(time, 3600)/60
-	timeString = 'Temps réalisé = ' + str(minutes) + 'min ' + str(seconds) + 's ' + str(msec) +'µs '
+	timeString = 'Temps réalisé : ' + str(minutes) + 'min ' + str(seconds) + 's ' + str(msec) +'µs '
 	$".".text = timeString

@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://1ho63xecdsgy"]
+[gd_scene load_steps=59 format=3 uid="uid://1ho63xecdsgy"]
 
 [ext_resource type="Script" path="res://script/Player.gd" id="1_px6a5"]
 [ext_resource type="Texture2D" uid="uid://du08ky38t274o" path="res://sprite/mainCharactere/Idle (32x32).png" id="2_bjv7x"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://d86tvg8000v1" path="res://sprite/mainCharactere/Double Jump (32x32).png" id="6_53ku8"]
 [ext_resource type="Texture2D" uid="uid://cqof00eywbjvg" path="res://sprite/mainCharactere/Run (32x32).png" id="7_lg1xc"]
 [ext_resource type="Texture2D" uid="uid://c7qtt75glvne6" path="res://sprite/mainCharactere/Wall Jump (32x32).png" id="8_0jwxo"]
+[ext_resource type="PackedScene" uid="uid://cb3ciyuai08ad" path="res://scene/sound_scene/jump_sound.tscn" id="10_m6il3"]
+[ext_resource type="PackedScene" uid="uid://dudh22k2g414" path="res://scene/sound_scene/roll_sound.tscn" id="11_5u7w4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7k4uq"]
 atlas = ExtResource("3_yiuh2")
@@ -406,5 +408,10 @@ target_position = Vector2(19, 0)
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
 wait_time = 4.0
+
+[node name="JumpSound" parent="." instance=ExtResource("10_m6il3")]
+volume_db = -6.0
+
+[node name="RollSound" parent="." instance=ExtResource("11_5u7w4")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

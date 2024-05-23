@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://kspc8lyvfgfi"]
+[gd_scene load_steps=15 format=3 uid="uid://kspc8lyvfgfi"]
 
 [ext_resource type="Script" path="res://script/Finish.gd" id="1_o3n3q"]
 [ext_resource type="Texture2D" uid="uid://bfbsxbrloofex" path="res://sprite/finish/End (Pressed) (64x64).png" id="2_o0t4f"]
 [ext_resource type="Texture2D" uid="uid://pp41802287qi" path="res://sprite/finish/End (Idle).png" id="3_n76ht"]
+[ext_resource type="PackedScene" uid="uid://k5107c5vgfpm" path="res://scene/sound_scene/end_sound.tscn" id="4_n46h6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jahqy"]
 size = Vector2(46, 44)
@@ -93,6 +94,8 @@ animation = &"ilde"
 autoplay = "ilde"
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="EndSound" parent="." instance=ExtResource("4_n46h6")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

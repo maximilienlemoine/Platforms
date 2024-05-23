@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dudh22k2g414"]
+
+[ext_resource type="AudioStream" uid="uid://wbagcuv15fc5" path="res://sound/explosion.wav" id="1_dumjt"]
+
+[node name="RollSound" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_dumjt")
+bus = &"SFX"

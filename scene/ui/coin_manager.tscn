@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cys7a874b2gwx"]
+
+[ext_resource type="FontFile" uid="uid://ctxt0f0n0hkeu" path="res://fonts/PixelOperator8.ttf" id="1_384t7"]
+[ext_resource type="Script" path="res://script/CoinManager.gd" id="1_426mc"]
+
+[node name="CoinManager" type="CanvasLayer"]
+script = ExtResource("1_426mc")
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 112.0
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 96.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("1_384t7")
+text = "0 pièce"
+horizontal_alignment = 2
+vertical_alignment = 1

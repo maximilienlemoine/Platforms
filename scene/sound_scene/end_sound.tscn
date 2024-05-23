@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://k5107c5vgfpm"]
+
+[ext_resource type="AudioStream" uid="uid://dtofserta64ac" path="res://sound/end.wav" id="1_32dti"]
+
+[node name="EndSound" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_32dti")
+volume_db = 8.0
+bus = &"SFX"

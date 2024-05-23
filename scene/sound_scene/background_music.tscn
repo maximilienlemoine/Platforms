@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcl1fr2leoamn"]
+
+[ext_resource type="AudioStream" uid="uid://db4kvm4pgl6er" path="res://sound/Ludum Dare 28 - 01.ogg" id="1_nq3iv"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_nq3iv")
+autoplay = true
+max_distance = 4000.0
+attenuation = 1e-05
+bus = &"Music"

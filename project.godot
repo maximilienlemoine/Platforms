@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Platform"
-run/main_scene="res://scene/start_scene.tscn"
+run/main_scene="res://scene/ui/start_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
@@ -21,6 +21,8 @@ config/icon="res://icon.svg"
 LevelManager="*res://script/LevelManager.gd"
 Checkpoint="*res://script/Checkpoint.gd"
 TimeManager="*res://script/TimeManager.gd"
+BackgroundMusic="*res://scene/sound_scene/background_music.tscn"
+CoinManager="*res://scene/ui/coin_manager.tscn"
 
 [editor_plugins]
 

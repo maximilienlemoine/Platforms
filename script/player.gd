@@ -26,7 +26,14 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_cooldown_dash:
 		dash = true
 		is_on_cooldown_dash = false
-		velocity.x += direction * SPEED * 2
+		$RollSound.play()
+		if (direction == 0):
+			if animatedSprite.flip_h == true:
+				velocity.x += -1 * SPEED * 2
+			else:
+				velocity.x += 1 * SPEED * 2
+		else:
+			velocity.x += direction * SPEED * 2
 		await get_tree().create_timer(0.2).timeout
 		dash = false
 		$Timer.start()
@@ -45,8 +52,10 @@ func jump(delta):
 			double_jump = true
 			velocity.y = WALL_SLIDE_GRAVITY * delta
 			if Input.is_action_just_pressed("ui_right"):
+				$JumpSound.play()
 				velocity.y = JUMP_VELOCITY*1.2
 			if Input.is_action_just_pressed("ui_left"):
+				$JumpSound.play()
 				velocity.y = JUMP_VELOCITY*1.2
 		else:
 			velocity.y += gravity * delta
@@ -54,9 +63,11 @@ func jump(delta):
 	if Input.is_action_just_pressed("ui_up"):
 		if is_on_floor():
 			double_jump = true
+			$JumpSound.play()
 			velocity.y = JUMP_VELOCITY
 		elif double_jump:
 			double_jump = false
+			$JumpSound.play()
 			velocity.y = JUMP_VELOCITY
 
 func handle_animation(direction):

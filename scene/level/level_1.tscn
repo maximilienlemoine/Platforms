@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cfycsqjwwwku5"]
+[gd_scene load_steps=41 format=3 uid="uid://cfycsqjwwwku5"]
 
 [ext_resource type="Script" path="res://script/GameManager.gd" id="1_08ajl"]
 [ext_resource type="Texture2D" uid="uid://cskhh5dfvx7jl" path="res://sprite/background/Green.png" id="2_4argw"]
@@ -13,8 +13,9 @@
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="11_saqr1"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="12_jni5c"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="13_xxwuu"]
-[ext_resource type="PackedScene" uid="uid://br0pelxyd1cxj" path="res://scene/timer.tscn" id="14_u7yqf"]
+[ext_resource type="PackedScene" uid="uid://br0pelxyd1cxj" path="res://scene/ui/timer.tscn" id="14_u7yqf"]
 [ext_resource type="PackedScene" uid="uid://kspc8lyvfgfi" path="res://scene/finish.tscn" id="15_l6ohg"]
+[ext_resource type="PackedScene" uid="uid://3hiloucn1hhw" path="res://scene/collectable/coin.tscn" id="16_sycvd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlx65"]
 texture = ExtResource("3_1wjux")
@@ -1189,6 +1190,9 @@ position = Vector2(900, -96)
 [node name="checkpoint2" parent="Checkpoints" instance=ExtResource("8_xbxqt")]
 position = Vector2(1287, 96)
 
+[node name="Finish" parent="Checkpoints" instance=ExtResource("15_l6ohg")]
+position = Vector2(767, 160)
+
 [node name="killzone" parent="." instance=ExtResource("9_wjul7")]
 position = Vector2(142, 243)
 
@@ -1212,44 +1216,184 @@ shape = SubResource("RectangleShape2D_qgoj5")
 position = Vector2(1641, 5.5)
 shape = SubResource("RectangleShape2D_fm44r")
 
-[node name="CameraArea" type="Node" parent="."]
+[node name="CameraManager" type="Node" parent="."]
+script = ExtResource("10_odc21")
 
-[node name="FirstPartArea" type="Area2D" parent="CameraArea"]
+[node name="FirstPartArea" type="Area2D" parent="CameraManager"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraArea/FirstPartArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/FirstPartArea"]
 position = Vector2(171, 12.5)
 shape = SubResource("RectangleShape2D_uulj8")
+metadata/_edit_lock_ = true
 
-[node name="SecondPartArea" type="Area2D" parent="CameraArea"]
+[node name="SecondPartArea" type="Area2D" parent="CameraManager"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraArea/SecondPartArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/SecondPartArea"]
 position = Vector2(1049, -111.25)
 shape = SubResource("RectangleShape2D_4xe3o")
 debug_color = Color(0.50142, 0.427617, 1, 0.42)
+metadata/_edit_lock_ = true
 
-[node name="ThridPartArea" type="Area2D" parent="CameraArea"]
+[node name="ThridPartArea" type="Area2D" parent="CameraManager"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraArea/ThridPartArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/ThridPartArea"]
 position = Vector2(1757, -65.75)
 shape = SubResource("RectangleShape2D_oa2sr")
 debug_color = Color(0.894118, 0, 0.776471, 0.32549)
+metadata/_edit_lock_ = true
 
-[node name="FourthPartArea" type="Area2D" parent="CameraArea"]
+[node name="FourthPartArea" type="Area2D" parent="CameraManager"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraArea/FourthPartArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/FourthPartArea"]
 position = Vector2(1757.5, 209.25)
 shape = SubResource("RectangleShape2D_1fb2l")
 debug_color = Color(0.968627, 0, 0.470588, 0.262745)
+metadata/_edit_lock_ = true
 
-[node name="LastPartArea" type="Area2D" parent="CameraArea"]
+[node name="LastPartArea" type="Area2D" parent="CameraManager"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraArea/LastPartArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraManager/LastPartArea"]
 position = Vector2(1048.75, 164.5)
 shape = SubResource("RectangleShape2D_n80j8")
 debug_color = Color(0.921569, 0.282353, 0, 0.188235)
+metadata/_edit_lock_ = true
 
-[node name="CameraManager" type="Node" parent="."]
-script = ExtResource("10_odc21")
+[node name="Colletable" type="Node" parent="."]
+
+[node name="Coin" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(198, 88)
+
+[node name="Coin2" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(25, -27)
+
+[node name="Coin3" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(249, -220)
+
+[node name="Coin4" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(263, -220)
+
+[node name="Coin5" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(278, -220)
+
+[node name="Coin6" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(-355, -76)
+
+[node name="Coin7" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(-77, -184)
+
+[node name="Coin8" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(94, -201)
+
+[node name="Coin9" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(108, -201)
+
+[node name="Coin10" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(123, -201)
+
+[node name="Coin11" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(681, -219)
+
+[node name="Coin12" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(752, -218)
+
+[node name="Coin13" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(696, 215)
+
+[node name="Coin14" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(729, -40)
+
+[node name="Coin15" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(-186, 141)
+
+[node name="Coin16" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1154, -180)
+
+[node name="Coin17" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1300, -218)
+
+[node name="Coin18" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(978, -144)
+
+[node name="Coin19" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(994, -152)
+
+[node name="Coin20" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1011, -161)
+
+[node name="Coin21" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1944, 24)
+
+[node name="Coin22" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1960, 24)
+
+[node name="Coin23" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1944, 8)
+
+[node name="Coin24" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1960, 8)
+
+[node name="Coin25" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1752, 24)
+
+[node name="Coin26" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1856, -16)
+
+[node name="Coin27" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1520, -16)
+
+[node name="Coin28" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(2119, -202)
+
+[node name="Coin29" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(2119, -217)
+
+[node name="Coin30" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1584, -120)
+
+[node name="Coin31" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1584, -104)
+
+[node name="Coin32" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1584, -88)
+
+[node name="Coin33" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1584, -72)
+
+[node name="Coin34" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1584, -56)
+
+[node name="Coin35" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1584, -40)
+
+[node name="Coin36" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1040, 133)
+
+[node name="Coin37" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1056, 133)
+
+[node name="Coin38" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1072, 133)
+
+[node name="Coin39" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1088, 133)
+
+[node name="Coin40" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(1024, 133)
+
+[node name="Coin41" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(896, 168)
+
+[node name="Coin42" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(880, 168)
+
+[node name="Coin43" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(864, 168)
+
+[node name="Coin44" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(848, 168)
+
+[node name="Coin45" parent="Colletable" instance=ExtResource("16_sycvd")]
+position = Vector2(832, 168)
 
 [node name="FirstPart" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 position = Vector2(-59, 88)
@@ -1330,19 +1474,13 @@ script = ExtResource("13_xxwuu")
 [node name="Timer" parent="." instance=ExtResource("14_u7yqf")]
 unique_name_in_owner = true
 
-[node name="Finish" parent="." instance=ExtResource("15_l6ohg")]
-position = Vector2(767, 160)
-
-[node name="Finish2" parent="." instance=ExtResource("15_l6ohg")]
-position = Vector2(-130, 64)
-
-[connection signal="body_entered" from="CameraArea/FirstPartArea" to="CameraManager" method="_on_first_part_area_body_entered"]
-[connection signal="body_exited" from="CameraArea/FirstPartArea" to="CameraManager" method="_on_first_part_area_body_exited"]
-[connection signal="body_entered" from="CameraArea/SecondPartArea" to="CameraManager" method="_on_second_part_area_body_entered"]
-[connection signal="body_exited" from="CameraArea/SecondPartArea" to="CameraManager" method="_on_second_part_area_body_exited"]
-[connection signal="body_entered" from="CameraArea/ThridPartArea" to="CameraManager" method="_on_thrid_part_area_body_entered"]
-[connection signal="body_exited" from="CameraArea/ThridPartArea" to="CameraManager" method="_on_thrid_part_area_body_exited"]
-[connection signal="body_entered" from="CameraArea/FourthPartArea" to="CameraManager" method="_on_fourth_part_area_body_entered"]
-[connection signal="body_exited" from="CameraArea/FourthPartArea" to="CameraManager" method="_on_fourth_part_area_body_exited"]
-[connection signal="body_entered" from="CameraArea/LastPartArea" to="CameraManager" method="_on_last_part_area_body_entered"]
-[connection signal="body_exited" from="CameraArea/LastPartArea" to="CameraManager" method="_on_last_part_area_body_exited"]
+[connection signal="body_entered" from="CameraManager/FirstPartArea" to="CameraManager" method="_on_first_part_area_body_entered"]
+[connection signal="body_exited" from="CameraManager/FirstPartArea" to="CameraManager" method="_on_first_part_area_body_exited"]
+[connection signal="body_entered" from="CameraManager/SecondPartArea" to="CameraManager" method="_on_second_part_area_body_entered"]
+[connection signal="body_exited" from="CameraManager/SecondPartArea" to="CameraManager" method="_on_second_part_area_body_exited"]
+[connection signal="body_entered" from="CameraManager/ThridPartArea" to="CameraManager" method="_on_thrid_part_area_body_entered"]
+[connection signal="body_exited" from="CameraManager/ThridPartArea" to="CameraManager" method="_on_thrid_part_area_body_exited"]
+[connection signal="body_entered" from="CameraManager/FourthPartArea" to="CameraManager" method="_on_fourth_part_area_body_entered"]
+[connection signal="body_exited" from="CameraManager/FourthPartArea" to="CameraManager" method="_on_fourth_part_area_body_exited"]
+[connection signal="body_entered" from="CameraManager/LastPartArea" to="CameraManager" method="_on_last_part_area_body_entered"]
+[connection signal="body_exited" from="CameraManager/LastPartArea" to="CameraManager" method="_on_last_part_area_body_exited"]

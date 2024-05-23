@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://5f1pipgld38"]
+
+[ext_resource type="AudioStream" uid="uid://cqvyeaj40igvy" path="res://sound/checkpoint.mp3" id="1_ybfgd"]
+
+[node name="CheckpointSound" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_ybfgd")
+bus = &"SFX"

@@ -4,6 +4,7 @@ extends Area2D
 func _on_body_entered(body):
 	if (body.name == 'Player'):
 		timer.start()
+		$HurtSound.play()
 		body.get_node("CollisionShape2D").queue_free()
 		Engine.time_scale = 0.5
 

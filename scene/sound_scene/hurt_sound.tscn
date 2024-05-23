@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bss541884xioe"]
+
+[ext_resource type="AudioStream" uid="uid://b7a1jp6agiw4n" path="res://sound/hurt.wav" id="1_s663m"]
+
+[node name="HurtSound" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_s663m")
+bus = &"SFX"

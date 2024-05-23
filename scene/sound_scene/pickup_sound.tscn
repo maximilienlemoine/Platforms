@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6ikbxnkct71b"]
+
+[ext_resource type="AudioStream" uid="uid://dsbh44k8kaxm4" path="res://sound/coin.wav" id="1_qifoy"]
+
+[node name="PickupSound" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_qifoy")
+bus = &"SFX"

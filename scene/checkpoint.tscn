@@ -1,9 +1,10 @@
-[gd_scene load_steps=46 format=3 uid="uid://dpk6v8mkb10qm"]
+[gd_scene load_steps=47 format=3 uid="uid://dpk6v8mkb10qm"]
 
 [ext_resource type="Texture2D" uid="uid://cujm20lgt4ywn" path="res://sprite/checkpoint/Checkpoint (No Flag).png" id="1_5ie3k"]
 [ext_resource type="Script" path="res://script/CheckpointFlag.gd" id="1_pbbpb"]
 [ext_resource type="Texture2D" uid="uid://3fue37lcoq18" path="res://sprite/checkpoint/Checkpoint (Flag Idle)(64x64).png" id="2_j7poe"]
 [ext_resource type="Texture2D" uid="uid://c6x218n7b1u2c" path="res://sprite/checkpoint/Checkpoint (Flag Out) (64x64).png" id="3_72pku"]
+[ext_resource type="PackedScene" uid="uid://5f1pipgld38" path="res://scene/sound_scene/checkpoint_sound.tscn" id="5_l1o16"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jc0xx"]
 atlas = ExtResource("2_j7poe")
@@ -355,5 +356,7 @@ shape = SubResource("RectangleShape2D_pxa28")
 libraries = {
 "": SubResource("AnimationLibrary_6tyyo")
 }
+
+[node name="CheckpointSound" parent="." instance=ExtResource("5_l1o16")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
