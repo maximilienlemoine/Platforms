@@ -11,14 +11,16 @@ config_version=5
 [application]
 
 config/name="Platform"
-run/main_scene="res://scene/game.tscn"
+run/main_scene="res://scene/start_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
 [autoload]
 
-Checkpoint="*res://script/checkpoint.gd"
+LevelManager="*res://script/LevelManager.gd"
+Checkpoint="*res://script/Checkpoint.gd"
+TimeManager="*res://script/TimeManager.gd"
 
 [editor_plugins]
 

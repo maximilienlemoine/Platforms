@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=3 uid="uid://d08idk8gs7gxs"]
+
+[ext_resource type="Script" path="res://script/EndScene.gd" id="1_esf5m"]
+[ext_resource type="Texture2D" uid="uid://b6afpdon37b71" path="res://sprite/background/Gray.png" id="1_ueyrf"]
+[ext_resource type="FontFile" uid="uid://cdvubpgwxjtje" path="res://fonts/PixelOperator8-Bold.ttf" id="2_n8glr"]
+[ext_resource type="Script" path="res://script/FinalTimer.gd" id="4_oh675"]
+[ext_resource type="FontFile" uid="uid://ctxt0f0n0hkeu" path="res://fonts/PixelOperator8.ttf" id="4_ouhsf"]
+
+[node name="EndScene" type="CanvasLayer"]
+script = ExtResource("1_esf5m")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_ueyrf")
+stretch_mode = 1
+
+[node name="QuitButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = 15.5
+offset_right = 32.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quitter"
+
+[node name="ReplayButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -45.5
+offset_right = -13.0
+offset_bottom = -14.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Rejouer"
+
+[node name="NextLevelButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.5
+offset_top = -45.5
+offset_right = 141.5
+offset_bottom = -14.5
+grow_horizontal = 2
+grow_vertical = 2
+disabled = true
+text = "Niveau Suivant"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.246
+anchor_right = 0.5
+anchor_bottom = 0.246
+offset_left = -20.0
+offset_top = -11.408
+offset_right = 20.0
+offset_bottom = 11.592
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.709804, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_n8glr")
+theme_override_font_sizes/font_size = 32
+text = "Platforms"
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.352
+anchor_right = 0.5
+anchor_bottom = 0.352
+offset_left = -37.0
+offset_top = -9.09602
+offset_right = 37.0
+offset_bottom = 13.904
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.709804, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ouhsf")
+theme_override_font_sizes/font_size = 16
+text = "Temps"
+script = ExtResource("4_oh675")
+
+[connection signal="tree_entered" from="." to="Label2" method="_on_end_scene_tree_entered"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="ReplayButton" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="NextLevelButton" to="." method="_on_next_level_button_pressed"]

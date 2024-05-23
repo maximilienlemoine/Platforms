@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://dm6vm7s5a5tsa"]
 
-[ext_resource type="Script" path="res://script/enemy.gd" id="1_8rbyw"]
+[ext_resource type="Script" path="res://script/Enemy.gd" id="1_8rbyw"]
 [ext_resource type="Texture2D" uid="uid://c18eg5r035x01" path="res://sprite/enemy/Run (32x32).png" id="1_ajaco"]
 [ext_resource type="PackedScene" uid="uid://cop36i1k8n1l4" path="res://scene/killzone.tscn" id="2_hrpqv"]
 

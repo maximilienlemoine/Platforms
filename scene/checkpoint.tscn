@@ -1,7 +1,7 @@
 [gd_scene load_steps=46 format=3 uid="uid://dpk6v8mkb10qm"]
 
 [ext_resource type="Texture2D" uid="uid://cujm20lgt4ywn" path="res://sprite/checkpoint/Checkpoint (No Flag).png" id="1_5ie3k"]
-[ext_resource type="Script" path="res://script/checkpoint_flag.gd" id="1_pbbpb"]
+[ext_resource type="Script" path="res://script/CheckpointFlag.gd" id="1_pbbpb"]
 [ext_resource type="Texture2D" uid="uid://3fue37lcoq18" path="res://sprite/checkpoint/Checkpoint (Flag Idle)(64x64).png" id="2_j7poe"]
 [ext_resource type="Texture2D" uid="uid://c6x218n7b1u2c" path="res://sprite/checkpoint/Checkpoint (Flag Out) (64x64).png" id="3_72pku"]
 
