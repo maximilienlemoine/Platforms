@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-const SPEED = 150
-const JUMP_VELOCITY = -300.0
-const WALL_JUMP_VELOCITY = 1000
-const WALL_SLIDE_GRAVITY = 1500
+@export var SPEED = 150
+@export var JUMP_VELOCITY = -300.0
+@export var WALL_JUMP_VELOCITY = 1000
+@export var WALL_SLIDE_GRAVITY = 1500
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -16,14 +16,21 @@ var is_on_cooldown_dash = true
 @onready var ray_cast_right = $RayCastRight
 @onready var timer = $Timer
 
+enum States {
+	IDLE,
+	RUN,JUMP,
+	AIR,
+	DEAD,
+}
+
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("controller_left", "controller_right")
 	jump(delta)
 	handle_animation(direction)
 	
-	if Input.is_action_just_pressed("ui_accept") and is_on_cooldown_dash:
+	if Input.is_action_just_pressed("dash") and is_on_cooldown_dash:
 		dash = true
 		is_on_cooldown_dash = false
 		$RollSound.play()
@@ -48,19 +55,19 @@ func _physics_process(delta):
 	
 func jump(delta):
 	if not is_on_floor():
-		if is_on_wall() and Input.is_action_pressed("ui_up"):
+		if is_on_wall() and Input.is_action_pressed("jump"):
 			double_jump = true
 			velocity.y = WALL_SLIDE_GRAVITY * delta
-			if Input.is_action_just_pressed("ui_right"):
+			if Input.is_action_just_pressed("controller_right"):
 				$JumpSound.play()
 				velocity.y = JUMP_VELOCITY*1.2
-			if Input.is_action_just_pressed("ui_left"):
+			if Input.is_action_just_pressed("controller_left"):
 				$JumpSound.play()
 				velocity.y = JUMP_VELOCITY*1.2
 		else:
 			velocity.y += gravity * delta
 			
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			double_jump = true
 			$JumpSound.play()
