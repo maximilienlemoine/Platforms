@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcy2jm1ig31oj"]
+[gd_scene load_steps=7 format=3 uid="uid://bcy2jm1ig31oj"]
 
 [ext_resource type="Script" path="res://script/StartScene.gd" id="1_ukmlr"]
 [ext_resource type="Texture2D" uid="uid://b6afpdon37b71" path="res://sprite/background/Gray.png" id="2_parsd"]
 [ext_resource type="FontFile" uid="uid://ctxt0f0n0hkeu" path="res://fonts/PixelOperator8.ttf" id="3_n3lkg"]
 [ext_resource type="FontFile" uid="uid://cdvubpgwxjtje" path="res://fonts/PixelOperator8-Bold.ttf" id="4_nu08a"]
 [ext_resource type="PackedScene" uid="uid://b6ce7wxfjf5qf" path="res://scene/sound_scene/button_pressed_sound.tscn" id="5_eika1"]
+[ext_resource type="PackedScene" uid="uid://biu2j2pyk4cnx" path="res://scene/ui/controls_button.tscn" id="6_434nj"]
 
 [node name="StartScene" type="CanvasLayer"]
 script = ExtResource("1_ukmlr")
@@ -65,6 +66,12 @@ theme_override_font_sizes/font_size = 32
 text = "Platforms"
 
 [node name="ButtonPressedSound" parent="." instance=ExtResource("5_eika1")]
+
+[node name="Button" parent="." instance=ExtResource("6_434nj")]
+offset_left = 1026.0
+offset_top = 609.0
+offset_right = 1140.0
+offset_bottom = 636.0
 
 [connection signal="pressed" from="Level1Button" to="." method="_on_level_1_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

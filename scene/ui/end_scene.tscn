@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d08idk8gs7gxs"]
+[gd_scene load_steps=8 format=3 uid="uid://d08idk8gs7gxs"]
 
 [ext_resource type="Script" path="res://script/EndScene.gd" id="1_8yi5o"]
 [ext_resource type="Texture2D" uid="uid://b6afpdon37b71" path="res://sprite/background/Gray.png" id="2_1idph"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cdvubpgwxjtje" path="res://fonts/PixelOperator8-Bold.ttf" id="4_ernh6"]
 [ext_resource type="Script" path="res://script/FinalTimer.gd" id="5_yx377"]
 [ext_resource type="PackedScene" uid="uid://b6ce7wxfjf5qf" path="res://scene/sound_scene/button_pressed_sound.tscn" id="6_d3xqr"]
+[ext_resource type="PackedScene" uid="uid://biu2j2pyk4cnx" path="res://scene/ui/controls_button.tscn" id="7_aenx3"]
 
 [node name="EndScene" type="CanvasLayer"]
 script = ExtResource("1_8yi5o")
@@ -95,6 +96,12 @@ text = "Temps"
 script = ExtResource("5_yx377")
 
 [node name="ButtonPressedSound" parent="." instance=ExtResource("6_d3xqr")]
+
+[node name="Button" parent="." instance=ExtResource("7_aenx3")]
+offset_left = 1028.0
+offset_top = 614.0
+offset_right = 1142.0
+offset_bottom = 638.0
 
 [connection signal="tree_entered" from="." to="Label2" method="_on_end_scene_tree_entered"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
